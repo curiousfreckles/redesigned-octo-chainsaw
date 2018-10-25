@@ -48,11 +48,21 @@ st3 = st2.decode("cp1251")
 print("Decoding cp1251:\n", st3)
 
 '''
-12. Дополните код программы lab_02_04.py. Создайте строковую переменную season, заполнив ее названием текущего сезона, введенным с клавиатуры. Смените кодировку данной строки на utf-8. Выведите закодированное и декодированное значения на экран.
+	Шаг 12: Дополнить код программы lab_02_04.py. Создать строковую переменную season, заполнив ее названием текущего сезона, введенным с клавиатуры. Сменить кодировку данной строки на utf-8. Вывести закодированное и декодированное значения на экран.
+'''
+season = input("What is the season now? Type it up please: ")
+season_utf8 = season.encode("utf-8")
+print("The name of the season in utf-8 encoding: %s" % season_utf8)
+print("And now let's decode it right back: %s" % season_utf8.decode("utf-8"))
 
 '''
+	Шаг 13: Дополнить код программы lab_02_04.py. Создать переменную sh со значением "When shall we three meet again; In thunder, lightning, or in rain?". Осуществить замену слов "thunder ", "lightning" и "in rain" на подстроки "C", "Erlang" и "Java main" соответственно. Осуществить вывод итоговой строки на экран.
 
 '''
-13. Дополните код программы lab_02_04.py. Создайте переменнуюsh со значением "When shall we three meet again; In thunder, lightning, or in rain?". Осуществите замену слов "thunder ", "lightning" и "in rain" на подстроки "C", "Erlang" и "Java main" соответственно. Осуществите вывод итоговой строки на экран.
+sh = "When shall we three meet again; In thunder, lightning, or in rain?"
+print("Here's the original phrase: %s" % sh)
+sh = sh.replace("thunder", "C")
+sh = sh.replace("lightning", "Erlang")
+sh = sh.replace("in rain", "Java main")
+print("After replacing a couple of words: %s" % sh)
 
-'''
